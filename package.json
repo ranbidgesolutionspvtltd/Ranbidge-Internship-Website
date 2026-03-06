@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "cd \"Ranbidge Intern Website\" && npm install && npm run build",
+    "build": "cd \"Ranbidge Intern Website\" && npm install && npx vite build",
     "install-deps": "cd \"Ranbidge Intern Website\" && npm install"
   },
   "engines": {
