@@ -13,7 +13,7 @@
 ```
 Name: ranbidge-internship-website
 Branch: main
-Build Command: cd "Ranbidge Intern Website" && npm install && npm run build
+Build Command: npm run build
 Publish Directory: Ranbidge Intern Website/dist
 Auto-Deploy: Yes
 ```

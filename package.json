@@ -1,0 +1,13 @@
+{
+  "name": "ranbidge-internship-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "cd \"Ranbidge Intern Website\" && npm install && npm run build",
+    "install-deps": "cd \"Ranbidge Intern Website\" && npm install"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
