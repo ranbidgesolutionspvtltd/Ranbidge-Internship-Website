@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://github.com/Rgopi143/RANBIDGE-INTERN/sitemap.xml
+
+# Block important directories
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /.git/
+Disallow: /src/
+
+# Allow search engines to index the site
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Slurp
+
+# Crawl delay
+Crawl-delay: 1
