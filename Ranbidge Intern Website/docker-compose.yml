@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  ranbidge-website:
+    build: .
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - ranbidge-network
+
+  # Optional: Add SSL certificate management
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    command: certonly --webroot --webroot-path=/var/www/certbot --email admin@ranbidge.com --agree-tos --no-eff-email -d ranbidge.com -d www.ranbidge.com
+    profiles:
+      - ssl
+
+networks:
+  ranbidge-network:
+    driver: bridge
+
+volumes:
+  certbot-conf:
+  certbot-www:
